@@ -1,0 +1,49 @@
+<view class="bigbox">
+   <view class="one">
+      <view class="name">{{lists.name}}</view>
+      <view wx:if="{{hintshow}}" class="hint">*超过当前可用余额</view>
+      <view class="shuru"> <input bindinput='shuruinput' type="text" placeholder="输入金额" />
+         <view class="balance"> 余额{{balance}}</view>
+      </view>
+   </view>
+   <view class="two">
+      <input type="text" placeholder="备注(选填)" />
+
+   </view>
+   <view class="three">
+      <view>收款地址</view>
+      <view wx:if="{{hidetow}}" class="hidetow">请填写正确的{{lists.name}}收款地址 </view>
+         <van-icon class="clickshow" bindtap="clickshow" name="balance-list-o" />
+      <input value='{{clickshow}}' type="text" bindblur='address' placeholder="请输入收款{{lists.name}}地址" />
+   </view>
+   <view class="four">
+      <view>付款地址</view>
+      <view class="hidetow2">选择地址
+         <van-icon name="arrow" />
+      </view>
+      <view class="fout_second">
+         <view>{{lists.name}}地址</view>
+         <view>7hdf15sdd5r5rea1g5d4gfG4FSGR4g4fdv184</view>
+      </view>
+   </view>
+   <view class="five">
+      <view class="minersbox">
+         <view class="miners">矿工费用</view>
+         <view>
+            0.006=2.23
+         </view>
+      </view>
+      <van-slider value="50" bind:change="onChange" />
+      <view class="iconbox">
+         <view>自行车</view>
+         <view>飞机</view>
+      </view>
+      <view class="gaobox">
+         <text>高级模式</text>
+         <van-switch checked="{{ checked }}" bind:change="onChangetow" />
+      </view>
+     
+   </view>
+   <van-button bind:click='next' type="default">下一步</van-button>
+
+</view>

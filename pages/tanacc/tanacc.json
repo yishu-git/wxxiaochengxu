@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-slider": "../../miniprogram/miniprogram_npm/@vant/weapp/slider/index",
+    "van-switch": "../../miniprogram/miniprogram_npm/@vant/weapp/switch/index"
+  },
+  "navigationStyle":"default",
+  "navigationBarTextStyle":"black",
+  "navigationBarBackgroundColor":"#ffffff"
+}

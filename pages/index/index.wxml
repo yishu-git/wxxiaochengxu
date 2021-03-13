@@ -1,0 +1,49 @@
+<import src="../../assest/common/common.wxml"></import>
+
+<view class="outbox">
+   <view class="header">
+      <view class="header_first">
+         <van-icon color='white' name="pending-payment" size='40rpx' />
+         <van-image bind:click='login' round width="114rpx" height="114rpx" src="{{ avatarUrl? avatarUrl:'https://img.yzcdn.cn/vant/cat.jpeg'}}" />
+         <image bindtap="fenxiang" class="rightimg" src="../../assest/images/组 3@2x.png"></image>
+      </view>
+      <view class="wallet">{{list.wallet}}</view>
+      <view class="assets">总资产:{{list.assets}}</view>
+   </view>
+   <view class="hint">
+      <van-tabs active="a">
+  <van-tab title="标签 1" name="a">内容 1</van-tab>
+  <van-tab title="标签 2" name="b">内容 2</van-tab>
+  <van-tab title="标签 3" name="c">内容 3</van-tab>
+      </van-tabs>
+      <!-- 你还没有备份该钱包,请<text>立即备份</text> -->
+   </view>
+   <view class="background">
+   </view>
+   <scroll-view class="scroll_main" scroll-y="true">
+      <view class="lists">
+         <view class="asslist asslist2">
+            <text>资产列表</text>
+            <view class="guanli">
+               <van-icon name="add-o" /><text>管理资产</text></view>
+         </view>
+         <block wx:key='index' wx:for="{{list.lists}}">
+            <template is='thisname' data="{{item}}"></template>
+         </block>
+      </view>
+
+   </scroll-view>
+
+
+
+</view>
+
+
+<van-transition name='fade-up' show="{{show}}" custom-class="block">
+   <van-overlay show="{{show}}">
+      <van-loading class="loging" type="spinner" />
+   </van-overlay>
+</van-transition>
+<van-toast id="van-toast" />
+
+

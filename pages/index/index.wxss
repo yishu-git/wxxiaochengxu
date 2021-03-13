@@ -1,0 +1,118 @@
+.header{
+  height: 394rpx;
+  background-color: #1b82d2;
+  padding: 0 31rpx;
+  overflow: hidden;
+}
+van-popup{
+  position: relative;
+}
+.canvas{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+van-overlay{
+  position: relative;
+}
+.loging{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.rightimg{
+  margin-top: 90rpx;
+}
+.outbox{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+.pending-payment{
+  margin-top: -50rpx;
+}
+.header_first{
+  vertical-align: top;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 75rpx;
+}
+.header_first .rightimg{
+width: 46rpx;
+height: 46rpx;
+}
+.wallet{
+  text-align: center;
+  color: white;
+  font-size: 35rpx;
+  margin-top: 28rpx;
+  margin-bottom: 28rpx;
+}
+.assets{
+  font-size: 40rpx;
+  color: white;
+  text-align: center;
+}
+.scroll_main{
+  flex: 1;
+  overflow: hidden;
+
+}
+.hint{
+  height: 91rpx;
+  line-height: 91rpx;
+  font-size: 25rpx;
+  padding: 31rpx;
+  color: red;
+}
+.hint text{
+  padding: 10rpx 20rpx;
+  color: white;
+  border-radius: 30rpx;
+  background-color: red;
+  margin-left: 20rpx;
+}
+.background{
+  height: 24px;
+  background: #f2f2f2;
+}
+.lists{
+  padding: 0 40rpx;
+}
+.lists .asslist{
+  display: flex;
+  justify-content: space-between;
+  height: 120rpx;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.lists .asslist2{
+  height: 90rpx;
+}
+.guanli{
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  color: #1b82d2;
+}
+.assright{
+  text-align: right;
+}
+.assetss{
+  font-size: 36rpx;
+  color: #e9a430;
+
+}
+.approximate{
+  font-size: 25rpx;
+  color: #999999;
+
+}
+.swiperleri{
+  width: 65px;
+  height: 65px;
+}

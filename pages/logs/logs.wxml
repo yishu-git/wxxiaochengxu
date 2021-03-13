@@ -1,0 +1,14 @@
+<swiper class="swiper" previous-margin='30rpx' next-margin='60rpx' easing-function>
+  <block wx:for="{{imgs}}">
+    <swiper-item>
+      <image src="{{item}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="btns">
+  <van-button bind:click="onClick" type="primary">分享海报</van-button>
+  <van-button  bind:click="onClick" type="info">分享邀请链接</van-button>
+</view>
+
+<van-share-sheet show="{{ showShare }}" title="立即分享给好友" options="{{ options }}" bind:select="onSelect"
+  bind:close="onClose" />

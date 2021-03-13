@@ -1,0 +1,41 @@
+<view class="bigbox">
+  <view class="neibox">
+    <view class="change">
+      <view id="zichan" bindtap="Roa">
+        <van-icon name="replay" />更换资产</view>
+      <view id="dizhi">
+        <van-icon name="replay" />更换地址</view>
+    </view>
+    <view class="zhuanru">请转入{{items.name}}</view>
+    <view class="collectionAddress">收款地址</view>
+    <view class="collectionAddress">143243242342342343242314234234234</view>
+    <canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas>
+    <van-button type="default">复制收款地址</van-button>
+  </view>
+</view>
+<van-overlay show="{{ show }}" bind:click="onClickHide">
+  <view class="lists">
+  <view class="search">
+      <view>请选择资产</view>
+      <input type="text" placeholder="或者输入token名称搜索" bindblur='getvalue' />
+    </view>
+  <scroll-view class="scroll" scroll-y="true">
+    <view wx:for="{{newdata.length?newdata:actions}}" bindtap="clickchange" data-item="{{item}}" class="everylist">
+      <view class="listleft">
+        <image src="../../assest/images/74643f1c41b6511a38a4abd4e9aa122d.png"></image>
+        <view>
+          <view>
+           {{item.name}}
+          </view>
+          <view>
+            余额{{item.assest}}
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{item.id==rightredshow}}">
+        <van-icon class="rightred" name="success" />
+      </view>
+    </view>
+  </scroll-view>
+</view>
+</van-overlay>

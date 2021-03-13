@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-action-sheet": "../../miniprogram/miniprogram_npm/@vant/weapp/action-sheet/index"
+  },
+  "navigationStyle":"default",
+  "navigationBarTextStyle":"black",
+  "navigationBarBackgroundColor":"#ffffff"
+}

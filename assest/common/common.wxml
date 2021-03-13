@@ -1,0 +1,23 @@
+<template name="thisname">
+   <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
+      <view slot="left">
+         <image data-id="{{item.id}}" class="swiperleri" bindtap="shoukuan" src="../../assest/images/钱包-首页2_04.gif"></image>
+      </view>
+      <van-cell>
+         <view slot="title" class="assleft">
+            <view class="assname">{{item.name}}</view>
+            <view class="address">当前地址数:{{item.address}}</view>
+         </view>
+
+         <view class="assright">
+            <view class="assetss">{{item.assets}}</view>
+            <view class="approximate">≈￥{{item.approximate}}</view>
+         </view>
+
+      </van-cell>
+      <view slot="right">
+       
+         <image data-item="{{item}}" bindtap="traAcc" class="swiperleri" src="../../assest/images/钱包-首页2_03.gif"></image>
+      </view>
+   </van-swipe-cell>
+</template>
